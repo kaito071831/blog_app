@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     <>
       <Layout title='EXAMSYSTEM'>
         <div>
-          <p>TOP</p>
+          TOP
         </div>
       </Layout>
     </>

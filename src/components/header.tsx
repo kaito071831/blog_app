@@ -5,7 +5,6 @@ const HeaderStyle = styled.header`
   padding: 30px 4% 10px;
   top: 0;
   width: 100%;
-  height: 10vh;
   background-color: #fff;
   display: flex;
   align-items: center;

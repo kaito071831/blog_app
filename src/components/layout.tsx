@@ -12,7 +12,7 @@ type layoutProps = {
 const BaseLayout = styled.main`
   background-color: #7aae6a;
   display: block;
-  height: 85vh;
+  text-align: center;
 `
 
 export const Layout = (props: layoutProps) => {
