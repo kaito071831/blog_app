@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { Contents } from "../components/content"
 
-const TopFont = styled.p`
+const TopP = styled.p`
   color: #ffffff;
 `
 
-const TopTitle = styled(TopFont.withComponent('h1'))`
+const TopH1 = styled(TopP.withComponent('h1'))`
   font-size: 3rem;
   margin: 0;
   
@@ -18,8 +18,8 @@ const TopContent = styled.div`
 export const Top = () => {
   return(
     <Contents bgColor="#000000">
-      <TopContent><TopTitle>Kaito071831</TopTitle></TopContent>
-      <TopContent><TopFont>Web Server Side Engineer</TopFont></TopContent>
+      <TopContent><TopH1>Kaito071831</TopH1></TopContent>
+      <TopContent><TopP>Web Server Side Engineer</TopP></TopContent>
     </Contents>
   )
 }
