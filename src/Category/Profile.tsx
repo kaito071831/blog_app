@@ -1,6 +1,9 @@
+import Image from "next/image"
+import styled from "styled-components"
 import { Contents } from "../components/content"
 
 const ICON = require('../../public/image/my_icon.jpg')
+
 
 const profiles = [
   {
@@ -28,7 +31,24 @@ const profiles = [
 export const Profile = () => {
   return(
     <Contents bgColor="#666666">
-      Test
+      <div>
+        <Image
+          src={ICON}
+          alt="kaito071831 icon"
+          width={200}
+          height={200}
+        />
+      </div>
+      <div>
+        <dl>
+          {profiles.map((profile) => (
+            <span key={profile.label}>
+              <dt>{profile.label}</dt>
+              <dd>{profile.content}</dd>
+            </span>
+          ))}
+        </dl>
+      </div>
     </Contents>
   )
 }
