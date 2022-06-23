@@ -1,18 +1,23 @@
 import Link from "next/link"
 import styled from "styled-components"
+import { sp } from "../styles/media"
 
 const HeaderStyle = styled.header`
-  padding: 30px 4% 10px;
+  padding: 2.5rem 4% 0.6rem;
   top: 0;
   width: 100%;
   background-color: #fff;
   display: flex;
   align-items: center;
+  ${sp`
+    display: block;
+    text-align: center;
+  `}
 `
 
 const HeaderTitle = styled.h1`
   margin: 0; padding: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 ` 
 
@@ -20,12 +25,19 @@ const HeaderUl = styled.ul`
   list-style: none;
   margin: 0;
   display: flex;
+  ${sp`
+    display: block;
+    padding: 0;
+  `}
 `
 
 const HeaderLi = styled.li`
-  margin: 0 0 0 15px;
-  font-size: 14px;
+  margin: 0 0 0 1rem;
+  font-size: 1rem;
   cursor: pointer;
+  ${sp`
+    margin: 1rem 0;
+  `}
 `
 
 const HeaderNav = styled.nav`
