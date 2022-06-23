@@ -8,7 +8,7 @@ const HistoryH2 = styled.h2`
 `
 
 
-const HistoryLi = styled.div`
+const HistoryContent = styled.div`
   margin-bottom: 4rem;
   ${pc`
     overflow: hidden;
@@ -51,51 +51,51 @@ export const History = () => {
     <Contents bgColor="#d4ae69">
       <HistoryH2>History</HistoryH2>
       <div>
-        <HistoryLi>
+        <HistoryContent>
           <HistoryP>2016/04-2021/03</HistoryP>
           <HistoryDiv>
             <h3>国際高等専門学校 グローバル情報学科</h3>
             <p>プログラミングの基礎, 会計の基礎を学習</p>
           </HistoryDiv>
-        </HistoryLi>
-        <HistoryLi>
+        </HistoryContent>
+        <HistoryContent>
           <HistoryP>2019/08</HistoryP>
           <HistoryDiv>
             <h3>NTT-ME インターン</h3>
             <p>電話・インターネット回線の構築の疑似体験</p>
           </HistoryDiv>
-        </HistoryLi>
-        <HistoryLi>
+        </HistoryContent>
+        <HistoryContent>
           <HistoryP>2021/04-</HistoryP>
           <HistoryDiv>
             <h3>金沢工業大学 情報工学科</h3>
             <p>コンピューターやシステム開発について学習</p>
           </HistoryDiv>
-        </HistoryLi>
-        <HistoryLi>
+        </HistoryContent>
+        <HistoryContent>
           <HistoryP>2021/04-</HistoryP>
           <HistoryDiv>
             <h3>株式会社CirKit Webエンジニア インターン</h3>
             <p>システム開発部にてインターン。金沢工業大学の学食で利用されているサービスSAKITOの開発に従事</p>
             <p>Ruby / Ruby on Rails / Python</p>
           </HistoryDiv>
-        </HistoryLi>
-        <HistoryLi>
+        </HistoryContent>
+        <HistoryContent>
           <HistoryP>2021/08</HistoryP>
           <HistoryDiv>
             <h3>株式会社TSOne エンジニア インターン</h3>
             <p>来客者受付システムの開発</p>
             <p>Python / Flask</p>
           </HistoryDiv>
-        </HistoryLi>
-        <HistoryLi>
+        </HistoryContent>
+        <HistoryContent>
           <HistoryP>2021/09</HistoryP>
           <HistoryDiv>
             <h3>株式会社タスク エンジニア インターン</h3>
             <p>コッペパン購入システムの開発</p>
             <p>JavaScript / GoogleAppsScript</p>
           </HistoryDiv>
-        </HistoryLi>
+        </HistoryContent>
       </div>
     </Contents>
   )
