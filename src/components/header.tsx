@@ -13,6 +13,7 @@ const HeaderStyle = styled.header`
 const HeaderTitle = styled.h1`
   margin: 0; padding: 0;
   font-size: 20px;
+  cursor: pointer;
 ` 
 
 const HeaderUl = styled.ul`
@@ -24,6 +25,7 @@ const HeaderUl = styled.ul`
 const HeaderLi = styled.li`
   margin: 0 0 0 15px;
   font-size: 14px;
+  cursor: pointer;
 `
 
 const HeaderNav = styled.nav`
