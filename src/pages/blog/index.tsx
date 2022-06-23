@@ -2,7 +2,7 @@ import type { NextPage, GetStaticProps } from "next";
 import Link from "next/link"
 
 import type { Blog } from "../../types/blog"
-import { client } from "../libs/client";
+import { client } from "../../libs/client";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { Layout } from "../../components/layout";
 
