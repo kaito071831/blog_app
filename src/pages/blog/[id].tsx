@@ -1,4 +1,4 @@
-import { client } from "../libs/client";
+import { client } from "../../libs/client";
 import { GetStaticPaths, NextPage } from "next";
 import { Blog, Context } from "../../types/blog";
 import { MicroCMSListResponse } from "microcms-js-sdk";
