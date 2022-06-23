@@ -1,9 +1,36 @@
 import Image from "next/image"
 import styled from "styled-components"
 import { Contents } from "../components/content"
+import {sp, pc} from "../styles/media"
 
 const ICON = require('../../public/image/my_icon.jpg')
 
+const ProfileDt = styled.dt`
+  float: left;
+  clear: left;
+  width: 6rem;
+  margin: 0.25rem 0;
+`
+
+const ProfileDd = styled.dd`
+  float: left;
+  margin: 0.25rem 0;
+`
+
+const ProfileDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const ProfileSpan = styled.span`
+  ${pc`
+    font-size: 1rem;
+  `}
+  ${sp`
+    font-size: 0.75rem
+  `}
+`
 
 const profiles = [
   {
@@ -16,11 +43,11 @@ const profiles = [
   },
   {
     label: "Write",
-    content: "Java/Python/Ruby/JavaScript(TypeScript)/Go"
+    content: "Java / Python / Ruby / JavaScript(TypeScript) / Go"
   },
   {
     label: "Hobby",
-    content: "アニメ鑑賞/カラオケ/サイクリング"
+    content: "アニメ鑑賞 / カラオケ / サイクリング"
   },
   {
     label: "Contact",
@@ -31,24 +58,26 @@ const profiles = [
 export const Profile = () => {
   return(
     <Contents bgColor="#666666">
-      <div>
-        <Image
-          src={ICON}
-          alt="kaito071831 icon"
-          width={200}
-          height={200}
-        />
-      </div>
-      <div>
-        <dl>
-          {profiles.map((profile) => (
-            <span key={profile.label}>
-              <dt>{profile.label}</dt>
-              <dd>{profile.content}</dd>
-            </span>
-          ))}
-        </dl>
-      </div>
+      <ProfileDiv>
+        <div>
+          <Image
+            src={ICON}
+            alt="kaito071831 icon"
+            width={200}
+            height={200}
+          />
+          <div>
+            <dl>
+              {profiles.map((profile) => (
+                <ProfileSpan key={profile.label}>
+                  <ProfileDt>{profile.label}</ProfileDt>
+                  <ProfileDd>{profile.content}</ProfileDd>
+                </ProfileSpan>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </ProfileDiv>
     </Contents>
   )
 }
