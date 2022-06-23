@@ -10,11 +10,13 @@ const ProfileDt = styled.dt`
   clear: left;
   width: 6rem;
   margin: 0.25rem 0;
+  font-family: 'Rubik Moonrocks', cursive;
 `
 
 const ProfileDd = styled.dd`
   float: left;
   margin: 0.25rem 0;
+  font-family: 'Noto Sans JP', sans-serif;
 `
 
 const ProfileDiv = styled.div`
@@ -24,12 +26,18 @@ const ProfileDiv = styled.div`
 `
 
 const ProfileSpan = styled.span`
+  color: #c4eedeb7;
   ${pc`
     font-size: 1rem;
   `}
   ${sp`
     font-size: 0.75rem
   `}
+`
+
+const ProfileH2 = styled.h2`
+  color: #c4eedeb7;
+  font-size: 2rem;
 `
 
 const profiles = [
@@ -60,6 +68,7 @@ export const Profile = () => {
     <Contents bgColor="#666666">
       <ProfileDiv>
         <div>
+          <ProfileH2>Profile</ProfileH2>
           <Image
             src={ICON}
             alt="kaito071831 icon"
