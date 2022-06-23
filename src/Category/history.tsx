@@ -14,6 +14,7 @@ const HistoryContent = styled.div`
     overflow: hidden;
     margin: 0;
     position: relative;
+    padding-left: 2rem;
   `}
 `
 
@@ -27,10 +28,9 @@ const HistoryP = styled.p`
 
 const HistoryDiv = styled.div`
   ${pc`
-    width: 75%;
+    width: 85%;
     float: left;
     border-left: 0.25rem #000000 solid;
-    padding-left: 2rem;
   `}
   &:before {
     ${pc`
@@ -39,7 +39,7 @@ const HistoryDiv = styled.div`
       height: 1rem;
       background: #6fc173;
       position: absolute;
-      left: 6.7rem;
+      left: 8.7rem;
       top: 2rem;
       border-radius: 100%;
     `}
