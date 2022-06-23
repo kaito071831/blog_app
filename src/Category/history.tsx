@@ -7,7 +7,6 @@ const HistoryH2 = styled.h2`
   font-size: 2rem;
 `
 
-
 const HistoryContent = styled.div`
   margin-bottom: 4rem;
   ${pc`
