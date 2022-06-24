@@ -26,7 +26,7 @@ const HeaderUl = styled.ul`
   margin: 0;
   display: flex;
   ${sp`
-    display: block;
+    display: none;
     padding: 0;
   `}
 `
@@ -35,9 +35,6 @@ const HeaderLi = styled.li`
   margin: 0 0 0 1rem;
   font-size: 1rem;
   cursor: pointer;
-  ${sp`
-    margin: 1rem 0;
-  `}
 `
 
 const HeaderNav = styled.nav`
