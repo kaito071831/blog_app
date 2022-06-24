@@ -10,17 +10,19 @@ type Props = {
 
 const BlogId: NextPage<Props> = ({ blog }: Props) => {
   return(
-    <Layout title={blog.title}>
-      <main>
-        <h1>{blog.title}</h1>
-        <p>{blog.publishedAt}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${blog.body}`,
-          }}
-        />
-      </main>
-    </Layout>
+    <>
+      <Layout title={blog.title}>
+        <main>
+          <h1>{blog.title}</h1>
+          <p>{blog.publishedAt}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${blog.body}`,
+            }}
+          />
+        </main>
+      </Layout>
+    </>
   )
 } 
 

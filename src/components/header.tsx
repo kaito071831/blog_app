@@ -46,18 +46,20 @@ const HeaderNav = styled.nav`
 
 export const Header = () => {
   return(
-    <HeaderStyle>
-      <Link href="/">
-        <HeaderTitle>EXAMSYSTEM</HeaderTitle>
-      </Link>
-      <HeaderNav>
-        <HeaderUl>
-          <Link href="https://twitter.com/kaito071831"><HeaderLi>Twitter</HeaderLi></Link>
-          <Link href="https://qiita.com/kaito071831"><HeaderLi>Qiita</HeaderLi></Link>
-          <Link href="https://github.com/kaito071831"><HeaderLi>GitHub</HeaderLi></Link>
-          <Link href="/blog"><HeaderLi>BLOG</HeaderLi></Link>
-        </HeaderUl>
-      </HeaderNav>
-    </HeaderStyle>
+    <>
+      <HeaderStyle>
+        <Link href="/">
+          <HeaderTitle>EXAMSYSTEM</HeaderTitle>
+        </Link>
+        <HeaderNav>
+          <HeaderUl>
+            <Link href="https://twitter.com/kaito071831"><HeaderLi>Twitter</HeaderLi></Link>
+            <Link href="https://qiita.com/kaito071831"><HeaderLi>Qiita</HeaderLi></Link>
+            <Link href="https://github.com/kaito071831"><HeaderLi>GitHub</HeaderLi></Link>
+            <Link href="/blog"><HeaderLi>BLOG</HeaderLi></Link>
+          </HeaderUl>
+        </HeaderNav>
+      </HeaderStyle>
+    </>
   )
 }

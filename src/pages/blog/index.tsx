@@ -24,19 +24,21 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
   return(
-    <Layout title="Blog">
-      <div>
-        <ul>
-          {blog.map((blog) => (
-            <li key={blog.id}>
-              <Link href={`/blog/${blog.id}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <>
+      <Layout title="Blog">
+        <div>
+          <ul>
+            {blog.map((blog) => (
+              <li key={blog.id}>
+                <Link href={`/blog/${blog.id}`}>
+                  <a>{blog.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Layout>
+    </>
   );
 };
 
