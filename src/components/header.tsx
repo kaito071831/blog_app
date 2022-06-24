@@ -49,7 +49,7 @@ export const Header = () => {
     <>
       <HeaderStyle>
         <Link href="/">
-          <HeaderTitle>EXAMSYSTEM</HeaderTitle>
+          <HeaderTitle>kaito071831</HeaderTitle>
         </Link>
         <HeaderNav>
           <HeaderUl>
