@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Contents } from "../components/content"
 import {sp, pc} from "../styles/media"
 
-const ICON = require('../../public/image/my_icon.jpg')
+const ICON = require('../../public/image/my_icon.png')
 
 const ProfileDt = styled.dt`
   float: left;
