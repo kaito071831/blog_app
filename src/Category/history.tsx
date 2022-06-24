@@ -86,8 +86,8 @@ export const History = () => {
     <Contents bgColor="#d4ae69">
       <HistoryH2>History</HistoryH2>
       <div>
-        { careers.map((career) => (
-          <HistoryContent>
+        {careers.map((career) => (
+          <HistoryContent key={career.content}>
             <HistoryP>{career.date}</HistoryP>
             <HistoryDiv>
               <h3>{career.content}</h3>
