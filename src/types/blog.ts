@@ -5,7 +5,8 @@ export type Blog = {
   publishedAt: string;
   revisedAt: string;
   title: string;
-  body: string;
+  body?: string | null;
+  image?: string | null;
 }
 
 export type Context = {
