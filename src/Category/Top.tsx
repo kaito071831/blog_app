@@ -17,9 +17,11 @@ const TopContent = styled.div`
 
 export const Top = () => {
   return(
-    <Contents bgColor="#000000">
-      <TopContent><TopH1>Kaito071831</TopH1></TopContent>
-      <TopContent><TopP>Web Server Side Engineer</TopP></TopContent>
-    </Contents>
+    <>
+      <Contents bgColor="#000000">
+        <TopContent><TopH1>Kaito071831</TopH1></TopContent>
+        <TopContent><TopP>Web Server Side Engineer</TopP></TopContent>
+      </Contents>    
+    </>
   )
 }
