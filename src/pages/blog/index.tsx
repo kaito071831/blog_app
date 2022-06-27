@@ -11,6 +11,10 @@ import Image from "next/image";
 
 const DEFAULT_ICON = require('../../../public/image/my_icon.png')
 
+const ContentsBox = styled.div`
+  height: 100vh;
+`
+
 const BlogH2 = styled.h2`
   font-size: 2rem;
   color: #ffffff;
@@ -66,32 +70,35 @@ const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
     <>
       <Layout title="Blog">
         <Contents bgColor="#16228e">
-          <BlogH2>kaito071831 Blog</BlogH2>
-          <div>
-            <BlogUl>
-              {blog.map((blog: Blog) => (
-                <BlogLi key={blog.id}>
-                  <Link href={`/blog/${blog.id}`}>
-                    <div>
-                      <TitleBox>{blog.title}</TitleBox>
-                      <BlogDiv>
-                        <div>
-                          <Image
-                            src={blog.image ? blog.image : DEFAULT_ICON}
-                            width={50}
-                            height={50}
-                          />
-                        </div>
-                        <div>
-                          <BodyBox>{blog.body?.replaceAll(/<[^>]+>/g, "")}</BodyBox>
-                        </div>
-                      </BlogDiv>
-                    </div>
-                  </Link>
-                </BlogLi>
-              ))}
-            </BlogUl>
-          </div>
+          <ContentsBox>
+            <BlogH2>kaito071831 Blog</BlogH2>
+            <div>
+              <BlogUl>
+                {blog.map((blog: Blog) => (
+                  <BlogLi key={blog.id}>
+                    <Link href={`/blog/${blog.id}`}>
+                      <div>
+                        <TitleBox>{blog.title}</TitleBox>
+                        <BlogDiv>
+                          <div>
+                            <Image
+                              src={blog.image ? blog.image : DEFAULT_ICON}
+                              width={50}
+                              height={50}
+                            />
+                          </div>
+                          <div>
+                            <BodyBox>{blog.body?.replaceAll(/<[^>]+>/g, "")}</BodyBox>
+                          </div>
+                        </BlogDiv>
+                      </div>
+                    </Link>
+                  </BlogLi>
+                ))}
+              </BlogUl>
+            </div>
+          </ContentsBox>
+
         </Contents>
       </Layout>
     </>
