@@ -1,8 +1,9 @@
-import Head from "next/head"
+
 import { ReactNode } from "react"
 import { Header } from './header'
 import { Footer } from './footer'
 import styled from "styled-components"
+import { HeadParts } from "./Head"
 
 type layoutProps = {
   title: string
@@ -18,9 +19,7 @@ const BaseLayout = styled.main`
 export const Layout = (props: layoutProps) => {
   return(
     <>
-      <Head>
-        <title>{props.title}</title>
-      </Head>
+      <HeadParts title={props.title}/>
       <Header/>
       <BaseLayout>
         {props.children}
