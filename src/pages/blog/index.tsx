@@ -5,6 +5,45 @@ import type { Blog } from "../../types/blog"
 import { client } from "../../libs/client";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { Layout } from "../../components/layout";
+import { Contents } from "../../components/content";
+import styled from "styled-components";
+import Image from "next/image";
+
+const DEFAULT_ICON = require('../../../public/image/my_icon.png')
+
+const BlogH2 = styled.h2`
+  font-size: 2rem;
+  color: #ffffff;
+`
+
+const BlogDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items:stretch;
+`
+
+const TitleBox = styled.div`
+  padding: 1rem;
+`
+
+const BodyBox = styled.div`
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 20rem;
+  padding: 0 1rem;
+`
+
+const BlogUl = styled.ul`
+  list-style: none;
+`
+
+const BlogLi = styled.li`
+  margin-bottom: 2rem;
+`
 
 type Props = {
   blog: Blog[]
@@ -26,17 +65,34 @@ const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
   return(
     <>
       <Layout title="Blog">
-        <div>
-          <ul>
-            {blog.map((blog) => (
-              <li key={blog.id}>
-                <Link href={`/blog/${blog.id}`}>
-                  <a>{blog.title}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Contents bgColor="#16228e">
+          <BlogH2>kaito071831 Blog</BlogH2>
+          <div>
+            <BlogUl>
+              {blog.map((blog: Blog) => (
+                <BlogLi key={blog.id}>
+                  <Link href={`/blog/${blog.id}`}>
+                    <div>
+                      <TitleBox>{blog.title}</TitleBox>
+                      <BlogDiv>
+                        <div>
+                          <Image
+                            src={blog.image ? blog.image : DEFAULT_ICON}
+                            width={50}
+                            height={50}
+                          />
+                        </div>
+                        <div>
+                          <BodyBox>{blog.body?.replaceAll(/<[^>]+>/g, "")}</BodyBox>
+                        </div>
+                      </BlogDiv>
+                    </div>
+                  </Link>
+                </BlogLi>
+              ))}
+            </BlogUl>
+          </div>
+        </Contents>
       </Layout>
     </>
   );
