@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { HeadParts } from "./Head"
 
 type layoutProps = {
-  title: string
+  title?: string
   children: ReactNode
 }
 
