@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation } from 'swiper';
 import Image from "next/image";
 import Link from "next/link";
-import { Product, Products } from "../pages/product";
+import { Products } from "../pages/product";
 import { pc, sp } from "../styles/media";
+
+import type { Product } from "../pages/product"
 
 SwiperCore.use([Pagination, Navigation]);
 
