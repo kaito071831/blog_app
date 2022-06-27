@@ -45,7 +45,14 @@ const HistoryDiv = styled.div`
   }
 `
 
-const careers = [
+type Career = {
+  date: string;
+  content: string;
+  detail: string;
+  tech?: string; 
+}
+
+const careers: Career[] = [
   {
     date: "2016/04-2021/03",
     content: "国際高等専門学校 グローバル情報学科",
@@ -86,7 +93,7 @@ export const History = () => {
     <Contents bgColor="#d4ae69">
       <HistoryH2>History</HistoryH2>
       <div>
-        {careers.map((career) => (
+        {careers.map((career: Career) => (
           <HistoryContent key={career.content}>
             <HistoryP>{career.date}</HistoryP>
             <HistoryDiv>
