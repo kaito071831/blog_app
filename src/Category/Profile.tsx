@@ -26,7 +26,7 @@ const ProfileDiv = styled.div`
 `
 
 const ProfileSpan = styled.span`
-  color: #c4eedeb7;
+  color: #cfffffff;
   ${pc`
     font-size: 1rem;
   `}
@@ -36,7 +36,7 @@ const ProfileSpan = styled.span`
 `
 
 const ProfileH2 = styled.h2`
-  color: #c4eedeb7;
+  color: #cfffffff;
   font-size: 2rem;
 `
 

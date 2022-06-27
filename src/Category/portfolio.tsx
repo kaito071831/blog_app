@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Contents } from "../components/content"
 
 const ProductH2 = styled.h2`
-  color: #c4eedeb7;
+  color: #cfffffff;
   font-size: 2rem;
 `
 
