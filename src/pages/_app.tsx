@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react';
+import 'swiper/css/bundle';
 
 const App: NextPage<AppProps> = ({ Component, pageProps }: AppProps): JSX.Element =>  {
   useEffect(() => {
