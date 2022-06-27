@@ -80,7 +80,17 @@ const ProductTech = styled.div`
   `}
 `
 
-const products = [
+export type Product = {
+  title: string;
+  url: string;
+  src: any;
+  height: number;
+  width: number;
+  detail: string;
+  tech: string[];
+}
+
+export const Products: Product[] = [
   {
     title: "ポートフォリオサイト",
     url: "https://github.com/kaito071831",
@@ -126,8 +136,8 @@ const Product: NextPage = () => {
         <Contents bgColor="#74b3e7">
           <h1>Product</h1>
           <ProductIndex>
-            {products.map((product, index) => (
-              <ProductContent key={index}>
+            {Products.map((product: Product, index: number) => (
+              <ProductContent id={product.title} key={index}>
                 <div>
                   <h2>{product.title}</h2>
                   <Link href={product.url} passHref>
@@ -149,7 +159,7 @@ const Product: NextPage = () => {
                     <ProductSpan>
                       <ProductDt>使用技術</ProductDt>
                       <ProductDd>
-                        {product.tech.map((tc, index) => (
+                        {product.tech.map((tc: string, index: number) => (
                           <ProductTech key={index}>
                             <span>{tc}</span>
                           </ProductTech>
