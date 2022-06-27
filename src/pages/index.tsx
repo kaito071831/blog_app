@@ -8,7 +8,7 @@ import { Layout } from '../components/layout'
 const Home: NextPage = () => {
   return (
     <>
-      <Layout title='kaito071831'>
+      <Layout>
         <Top />
         <Profile />
         <History />
