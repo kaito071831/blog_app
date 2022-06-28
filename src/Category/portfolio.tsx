@@ -25,6 +25,10 @@ const ProductDiv = styled.div`
 
 const ProductA = styled.a`
   cursor: "pointer";
+  &:hover{
+    color: #ffffff;
+    opacity: 0.8;
+  }
 `
 
 type Image = {
