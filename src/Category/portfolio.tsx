@@ -1,15 +1,13 @@
 import styled from "styled-components"
 import { Contents } from "../components/content"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation, Autoplay } from 'swiper';
 import Image from "next/image";
 import Link from "next/link";
 import { Products } from "../pages/product";
 import { pc, sp } from "../styles/media";
 
 import type { Product } from "../pages/product"
-
-SwiperCore.use([Pagination, Navigation]);
 
 const ProductH2 = styled.h2`
   color: #cfffffff;
@@ -54,8 +52,13 @@ export const Portfolio = () => {
             pagination = {{
               clickable: true,
             }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             navigation
             loop={true}
+            modules={[Pagination, Autoplay, Navigation]}
           >
             {images.map((image: Image, index: number) => (
               <SwiperSlide key={index}>
