@@ -8,6 +8,7 @@ import { Layout } from "../../components/layout";
 import { Contents } from "../../components/content";
 import styled from "styled-components";
 import Image from "next/image";
+import { Category } from "@mui/icons-material";
 
 const DEFAULT_ICON = require('../../../public/image/my_icon.png')
 
@@ -28,6 +29,7 @@ const BlogDiv = styled.div`
 
 const TitleBox = styled.div`
   padding: 1rem;
+  display: inline;
 `
 
 const BodyBox = styled.div`
@@ -47,6 +49,20 @@ const BlogUl = styled.ul`
 
 const BlogLi = styled.li`
   margin-bottom: 2rem;
+`
+
+const BlogContent = styled.div`
+  border: 0.25rem;
+  border-radius: 1rem;
+  border-style: none;
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 1rem;
+`
+
+const LabelBox = styled.div`
+  text-align: left;
+  margin-top: 0.5rem;
 `
 
 type Props = {
@@ -77,7 +93,7 @@ const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
                 {blog.map((blog: Blog) => (
                   <BlogLi key={blog.id}>
                     <Link href={`/blog/${blog.id}`}>
-                      <div>
+                      <BlogContent>
                         <TitleBox>{blog.title}</TitleBox>
                         <BlogDiv>
                           <div>
@@ -89,16 +105,16 @@ const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
                           </div>
                           <div>
                             <BodyBox>{blog.body?.replaceAll(/<[^>]+>/g, "")}</BodyBox>
+                            <LabelBox>タグ: {blog.category && `${blog.category.category}`}</LabelBox>
                           </div>
                         </BlogDiv>
-                      </div>
+                      </BlogContent>
                     </Link>
                   </BlogLi>
                 ))}
               </BlogUl>
             </div>
           </ContentsBox>
-
         </Contents>
       </Layout>
     </>

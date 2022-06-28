@@ -7,6 +7,9 @@ export type Blog = {
   title: string;
   body?: string | null;
   image?: string | null;
+  category?: {
+    category: string;
+  }
 }
 
 export type Context = {

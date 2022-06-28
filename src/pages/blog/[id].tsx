@@ -15,6 +15,7 @@ const BlogId: NextPage<Props> = ({ blog }: Props) => {
         <main>
           <h1>{blog.title}</h1>
           <p>{blog.publishedAt}</p>
+          <p>{blog.category && `${blog.category.category}`}</p>
           <div
             dangerouslySetInnerHTML={{
               __html: `${blog.body}`,
