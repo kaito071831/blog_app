@@ -64,7 +64,7 @@ const ProductDd = styled.dd`
 
 const ProductTech = styled.div`
   display: inline-block;
-  border: 0.1rem #000000 none;
+  border: none;
   border-radius: 0.25rem;
   color: #1d90ed;
   background-color: #e4e4e4;
