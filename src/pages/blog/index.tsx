@@ -30,6 +30,7 @@ const BlogDiv = styled.div`
 const TitleBox = styled.div`
   padding: 0.5rem;
   display: inline-block;
+  font-size: 1.5rem;
 `
 
 const BodyBox = styled.div`
