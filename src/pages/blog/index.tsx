@@ -8,7 +8,7 @@ import { Layout } from "../../components/layout";
 import { Contents } from "../../components/content";
 import styled from "styled-components";
 import Image from "next/image";
-import { Category } from "@mui/icons-material";
+import { pc, sp } from "../../styles/media";
 
 const DEFAULT_ICON = require('../../../public/image/my_icon.png')
 
@@ -28,8 +28,8 @@ const BlogDiv = styled.div`
 `
 
 const TitleBox = styled.div`
-  padding: 1rem;
-  display: inline;
+  padding: 0.5rem;
+  display: inline-block;
 `
 
 const BodyBox = styled.div`
@@ -37,14 +37,21 @@ const BodyBox = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  width: 20rem;
-  padding: 0 1rem;
+  padding: 0;
+  ${pc`
+    width: 20rem;
+    -webkit-line-clamp: 2;
+  `}
+  ${sp`
+    width:10rem;
+    -webkit-line-clamp: 4;
+  `}
 `
 
 const BlogUl = styled.ul`
   list-style: none;
+  padding: 0;
 `
 
 const BlogLi = styled.li`
