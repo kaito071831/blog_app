@@ -66,6 +66,7 @@ const BlogContent = styled.div`
   background-color: #ffffff;
   display: inline-block;
   padding: 1rem;
+  cursor: pointer;
 `
 
 const LabelBox = styled.div`
