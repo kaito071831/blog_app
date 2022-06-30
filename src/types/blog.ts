@@ -1,3 +1,12 @@
+export type Category = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  category: string;
+}
+
 export type Blog = {
   id: string;
   createdAt: string;
@@ -7,9 +16,7 @@ export type Blog = {
   title: string;
   body?: string | null;
   image?: string | null;
-  category?: {
-    category: string;
-  }
+  category?: Category[];
 }
 
 export type Context = {
