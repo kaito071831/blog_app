@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticProps } from "next";
 import Link from "next/link"
 
-import type { Blog } from "../../types/blog"
+import type { Blog, Category } from "../../types/blog"
 import { client } from "../../libs/client";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { Layout } from "../../components/layout";
@@ -113,7 +113,7 @@ const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
                           </div>
                           <div>
                             <BodyBox>{blog.body?.replaceAll(/<[^>]+>/g, "")}</BodyBox>
-                            <LabelBox>タグ: {blog.category && `${blog.category.category}`}</LabelBox>
+                            <LabelBox>タグ: {blog.category && blog.category.map((cat: Category) => (cat.category)).join()}</LabelBox>
                           </div>
                         </BlogDiv>
                       </BlogContent>
