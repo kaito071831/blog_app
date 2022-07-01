@@ -14,8 +14,12 @@ export type Blog = {
   publishedAt: string;
   revisedAt: string;
   title: string;
-  body?: string | null;
-  image?: string | null;
+  body?: string;
+  image?:{
+    url: string;
+    height: number;
+    width: number;
+  };
   category?: Category[];
 }
 
