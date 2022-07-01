@@ -9,6 +9,7 @@ import { Contents } from "../../components/content";
 import styled from "styled-components";
 import Image from "next/image";
 import { pc, sp } from "../../styles/media";
+import { Pagination } from "../../components/Pagination";
 
 const DEFAULT_ICON = require('../../../public/image/my_icon.png')
 
@@ -75,22 +76,28 @@ const LabelBox = styled.div`
 `
 
 type Props = {
-  blog: Blog[]
-}
+  blog: Blog[];
+  totalCount: number;
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const data: MicroCMSListResponse<Blog> = await client.get<MicroCMSListResponse<Blog>>({
     endpoint: "blog",
+    queries: {
+      limit: 5,
+      offset: 0,
+    }
   });
 
   return {
     props: {
       blog: data.contents,
-    }
-  }
-}
+      totalCount: data.totalCount,
+    },
+  };
+};
 
-const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
+const BlogIndex: NextPage<Props> = ({ blog, totalCount }: Props) => {
   return(
     <>
       <Layout title="Blog">
@@ -107,7 +114,7 @@ const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
                         <BlogDiv>
                           <div>
                             <Image
-                              src={blog.image ? blog.image : DEFAULT_ICON}
+                              src={blog.image ? blog.image.url : DEFAULT_ICON}
                               width={50}
                               height={50}
                             />
@@ -122,6 +129,7 @@ const BlogIndex: NextPage<Props> = ({ blog }: Props) => {
                   </BlogLi>
                 ))}
               </BlogUl>
+              <Pagination totalCount={totalCount} />
             </div>
           </ContentsBox>
         </Contents>
