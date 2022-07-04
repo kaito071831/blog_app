@@ -16,7 +16,7 @@ type Props = {
 };
 
 const BlogContent = styled.div`
-  height: auto;
+  min-height: 100vh;
   background-color: #ffffff;
   padding: 2rem;
   margin: 1rem 3rem;
