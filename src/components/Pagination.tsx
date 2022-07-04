@@ -7,6 +7,18 @@ type Contents = {
 
 const PageDiv = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+`
+
+const PageLi = styled.div`
+  border: 0.25rem none;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
 `
 
 export const Pagination = ({ totalCount }: Contents) => {
@@ -15,14 +27,16 @@ export const Pagination = ({ totalCount }: Contents) => {
   const range = (start: number, end: number) => [...Array(end - start + 1)].map((_, i) => start + i)
 
   return(
-    <ul>
+    <>
+      <PageDiv>
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number: number, index: number) => (
-        <li key={index}>
-          <Link href={`/blog/page/${number}`}>
+        <Link href={`/blog/page/${number}`}>
+          <PageLi key={index}>
             <a>{number}</a>
-          </Link>
-        </li>
+          </PageLi>
+        </Link>
       ))}
-    </ul>
+      </PageDiv>
+    </>
   );
 };
