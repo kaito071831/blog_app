@@ -47,7 +47,7 @@ const BlogPageId = ({ blog, totalCount }: Props) => {
   return(
     <>
       <Layout title="Blog">
-        <Contents bgColor="#16228e">
+        <Contents bgColor="#3e4cc9">
           <div>
             <ul>
               {blog.map((blog: Blog) => (

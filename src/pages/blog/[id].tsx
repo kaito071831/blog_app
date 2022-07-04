@@ -113,7 +113,7 @@ const BlogId: NextPage<Props> = ({ blog, bloglist }: Props) => {
   return(
     <>
       <Layout title={blog.title}>
-        <Contents bgColor="#16228e">
+        <Contents bgColor="#3e4cc9">
           <BlogDisplay>
             <BlogContent>
               <TitleFont>{blog.title}</TitleFont>

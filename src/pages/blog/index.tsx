@@ -101,7 +101,7 @@ const BlogIndex: NextPage<Props> = ({ blog, totalCount }: Props) => {
   return(
     <>
       <Layout title="Blog">
-        <Contents bgColor="#16228e">
+        <Contents bgColor="#3e4cc9">
           <ContentsBox>
             <BlogH2>kaito071831 Blog</BlogH2>
             <div>
