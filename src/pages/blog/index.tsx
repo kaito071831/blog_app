@@ -14,7 +14,7 @@ import { Pagination } from "../../components/Pagination";
 const DEFAULT_ICON = require('../../../public/image/my_icon.png')
 
 const ContentsBox = styled.div`
-  height: 100vh;
+  height: auto;
 `
 
 const BlogH2 = styled.h2`
