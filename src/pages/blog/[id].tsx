@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { pc, sp } from "../../styles/media";
 import Link from "next/link";
 import Image from "next/image";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 type Props = {
   blog: Blog;
@@ -96,7 +97,7 @@ export const getStaticProps = async (context: Context) => {
   const list: MicroCMSListResponse<Blog> = await client.get<MicroCMSListResponse<Blog>>({
     endpoint: "blog",
     queries: {
-      limit: 10,
+      limit: 5,
       offset: 0,
     },
   });
@@ -139,14 +140,23 @@ const BlogId: NextPage<Props> = ({ blog, bloglist }: Props) => {
             <NavContent>
               <div>メニュー</div>
               <nav>
-                {bloglist.map((blog: Blog) => (
-                  <Link key={blog.id} href={`/blog/${blog.id}`}>
-                    <Menu>
-                      <p>{blog.title}</p>
-                      <span>タグ:{blog.category && blog.category.map((cat: Category) => (cat.category)).join()}</span>
-                    </Menu>
-                  </Link>
-                ))}
+                <div>
+                  {bloglist.map((blog: Blog) => (
+                    <Link key={blog.id} href={`/blog/${blog.id}`}>
+                      <Menu>
+                        <p>{blog.title}</p>
+                        <span>タグ:{blog.category && blog.category.map((cat: Category) => (cat.category)).join()}</span>
+                      </Menu>
+                    </Link>
+                  ))}
+                </div>
+                <div>
+                  <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName="kaito071831"
+                    options={{height: 400}}
+                  />
+                </div>
               </nav>
             </NavContent>
           </BlogDisplay>
