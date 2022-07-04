@@ -30,8 +30,8 @@ export const Pagination = ({ totalCount }: Contents) => {
     <>
       <PageDiv>
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number: number, index: number) => (
-        <Link href={`/blog/page/${number}`}>
-          <PageLi key={index}>
+        <Link key={index} href={`/blog/page/${number}`}>
+          <PageLi>
             <a>{number}</a>
           </PageLi>
         </Link>
