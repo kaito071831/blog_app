@@ -13,7 +13,7 @@ export const HeadParts = (props: Page) => {
     <Head>
       <title>{title}</title>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
-      <meta property="og:url" content={process.env.HP_URL}/>
+      <meta property="og:url" content={location.host}/>
       <meta property="og:type" content="website"/>
       <meta property="og:title" content={title}/>
       <meta property="og:description" content={DESCRIPTION}/>
@@ -21,6 +21,7 @@ export const HeadParts = (props: Page) => {
       <meta property="og:image" content={`${process.env.HP_URL}/favicon.ico`}/>
       <meta name="twitter:card" content="summary"/>
       <meta name="twitter:site" content="@kaito071831"/>
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   )
 }
