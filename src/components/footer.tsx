@@ -1,9 +1,8 @@
 import styled from "styled-components"
-import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from "next/link";
-import TwitterIcon from '@mui/icons-material/Twitter';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
-import ArticleIcon from '@mui/icons-material/Article';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faNewspaper, faBlog } from "@fortawesome/free-solid-svg-icons";
 
 const FooterStyle = styled.footer`
   width: 100%;
@@ -14,7 +13,7 @@ const FooterStyle = styled.footer`
 
 const FooterLink = styled.div`
   display: flex;
-  align-items: stretch;
+  align-items: strech;
   justify-content: center;
   margin-bottom: 1rem;
 `
@@ -25,45 +24,28 @@ export const Footer = () => {
       <FooterStyle>
         <FooterLink>
           <Link href="https://github.com/kaito071831">
-            <GitHubIcon
-              fontSize="large"
-              cursor="pointer"
-              sx={{"&:hover":{color: "white"}}}
-              titleAccess="GitHub"
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="icon"
             />
           </Link>
           <Link href="https://qiita.com/kaito071831">
-            <ArticleIcon
-              fontSize="large"
-              cursor="pointer"
-              sx={{
-                marginLeft: 2,
-                "&:hover":{color: "white"
-              }}}
-              titleAccess="Qiita"
+            <FontAwesomeIcon
+              icon={faNewspaper}
+              className="icon"
             />
           </Link>
           <Link href="https://twitter.com/kaito071831">
-            <TwitterIcon
-              fontSize="large"
-              cursor="pointer"
-              color="primary"
-              sx={{
-                marginLeft: 2,
-                "&:hover":{color: "white"}
-              }}
-              titleAccess="Twitter"
+            <FontAwesomeIcon
+              icon={faTwitter}
+              color="#00acee"
+              className="icon"
             />
           </Link>
           <Link href="/blog">
-            <RssFeedIcon
-              fontSize="large"
-              cursor="pointer"
-              sx={{
-                marginLeft: 2,
-                "&:hover":{color: "white"}
-              }}
-              titleAccess="Blog"
+            <FontAwesomeIcon
+              icon={faBlog}
+              className="icon"
             />
           </Link>
         </FooterLink>
