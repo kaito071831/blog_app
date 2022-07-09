@@ -27,12 +27,14 @@ export const Footer = () => {
             <FontAwesomeIcon
               icon={faGithub}
               className="icon"
+              title="GitHub"
             />
           </Link>
           <Link href="https://qiita.com/kaito071831">
             <FontAwesomeIcon
               icon={faNewspaper}
               className="icon"
+              title="Qiita"
             />
           </Link>
           <Link href="https://twitter.com/kaito071831">
@@ -40,12 +42,14 @@ export const Footer = () => {
               icon={faTwitter}
               color="#00acee"
               className="icon"
+              title="Twitter"
             />
           </Link>
           <Link href="/blog">
             <FontAwesomeIcon
               icon={faBlog}
               className="icon"
+              title="Blog"
             />
           </Link>
         </FooterLink>
