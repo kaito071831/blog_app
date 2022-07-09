@@ -10,6 +10,9 @@ kaito071831のポートフォリオサイトです。
 ### PaaS
 - ****Vercel****
 
+### CMS
+- ****microCMS****
+
 ## 開発環境
 - Node.js v16.13.0
 - yarn 1.22.18
