@@ -69,10 +69,10 @@ export const Header = () => {
         </Link>
         <HeaderNav>
           <HeaderUl>
-            {HeaderItems.map((item: HeaderItem) => (
-              <Link href="https://twitter.com/kaito071831">
+            {HeaderItems.map((item: HeaderItem, index: number) => (
+              <Link href={item.url} key={index}>
                 <a target="_blank">
-                  <HeaderLi>Twitter</HeaderLi>
+                  <HeaderLi>{item.title}</HeaderLi>
                 </a>
               </Link>
             ))}
