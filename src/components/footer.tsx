@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faGithub, IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { faNewspaper, faBlog } from "@fortawesome/free-solid-svg-icons";
 
 const FooterStyle = styled.footer`
@@ -18,33 +18,49 @@ const FooterLink = styled.div`
   margin-bottom: 1rem;
 `
 
+type FooterItem = {
+  url: string;
+  icon: IconDefinition;
+  title: string;
+  color?: string; 
+}
+
+const FooterItems: FooterItem[] = [
+  {
+    url: "https://github.com/kaito071831",
+    icon: faGithub,
+    title: "GitHub",
+  },
+  {
+    url: "https://qiita.com/kaito071831",
+    icon: faNewspaper,
+    title: "Qiita",
+  },
+  {
+    url: "https://twitter.com/kaito071831",
+    icon: faTwitter,
+    title: "Twitter",
+    color: "#00acee",
+  },
+]
+
 export const Footer = () => {
   return(
     <>
       <FooterStyle>
         <FooterLink>
-          <Link href="https://github.com/kaito071831">
-            <FontAwesomeIcon
-              icon={faGithub}
-              className="icon"
-              title="GitHub"
-            />
-          </Link>
-          <Link href="https://qiita.com/kaito071831">
-            <FontAwesomeIcon
-              icon={faNewspaper}
-              className="icon"
-              title="Qiita"
-            />
-          </Link>
-          <Link href="https://twitter.com/kaito071831">
-            <FontAwesomeIcon
-              icon={faTwitter}
-              color="#00acee"
-              className="icon"
-              title="Twitter"
-            />
-          </Link>
+          {FooterItems.map((item: FooterItem) => (
+            <Link href={item.url}>
+              <a target="_blank">
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className="icon"
+                  title={item.url}
+                  color={item.color}
+                />
+              </a>
+            </Link>
+          ))}
           <Link href="/blog">
             <FontAwesomeIcon
               icon={faBlog}
