@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faGithub, IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faNewspaper, faBlog } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 const FooterStyle = styled.footer`
   width: 100%;
@@ -20,7 +21,7 @@ const FooterLink = styled.div`
 
 type FooterItem = {
   url: string;
-  icon: IconDefinition;
+  icon: IconProp;
   title: string;
   color?: string; 
 }
@@ -50,7 +51,7 @@ export const Footer = () => {
       <FooterStyle>
         <FooterLink>
           {FooterItems.map((item: FooterItem, index: number) => (
-            <Link href={item.url} key={index}>
+            <Link href={item.url} key={index} passHref>
               <a target="_blank">
                 <FontAwesomeIcon
                   icon={item.icon}
