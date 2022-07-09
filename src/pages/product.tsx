@@ -146,6 +146,7 @@ const Product: NextPage = () => {
                         src={product.src}
                         height={product.height != 0 ? product.height : 0}
                         width={product.width != 0 ? product.width : 0}
+                        alt={product.title}
                       />
                     </ProductLink>
                   </Link>

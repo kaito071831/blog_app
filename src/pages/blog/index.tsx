@@ -117,6 +117,7 @@ const BlogIndex: NextPage<Props> = ({ blog, totalCount }: Props) => {
                               src={blog.image ? blog.image.url : DEFAULT_ICON}
                               width={50}
                               height={50}
+                              alt={blog.title}
                             />
                           </div>
                           <div>

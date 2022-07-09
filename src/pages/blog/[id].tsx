@@ -128,6 +128,7 @@ const BlogId: NextPage<Props> = ({ blog, bloglist }: Props) => {
                     src={blog.image?.url as string}
                     height={blog.image?.height}
                     width={blog.image?.width}
+                    alt={blog.title}
                   />
                 </div>
               }
