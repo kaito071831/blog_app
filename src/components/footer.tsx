@@ -49,8 +49,8 @@ export const Footer = () => {
     <>
       <FooterStyle>
         <FooterLink>
-          {FooterItems.map((item: FooterItem) => (
-            <Link href={item.url}>
+          {FooterItems.map((item: FooterItem, index: number) => (
+            <Link href={item.url} key={index}>
               <a target="_blank">
                 <FontAwesomeIcon
                   icon={item.icon}
