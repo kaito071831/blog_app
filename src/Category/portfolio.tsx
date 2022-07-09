@@ -34,13 +34,15 @@ const ProductA = styled.a`
 type Image = {
   src: any;
   href: string;
+  alt: string;
 }
 
 const images: Image[] = Products.map((product: Product) => {
   return(
     {
       src: product.src,
-      href: `/product#${product.title}`
+      href: `/product#${product.title}`,
+      alt: product.title,
     }
   )
 })
@@ -73,6 +75,7 @@ export const Portfolio = () => {
                       layout="responsive"
                       width={640}
                       height={400}
+                      alt={image.alt}
                     />
                   </ProductA>
                 </Link>
