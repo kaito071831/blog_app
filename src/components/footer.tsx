@@ -55,7 +55,7 @@ export const Footer = () => {
                 <FontAwesomeIcon
                   icon={item.icon}
                   className="icon"
-                  title={item.url}
+                  title={item.title}
                   color={item.color}
                 />
               </a>
