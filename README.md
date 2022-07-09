@@ -19,5 +19,4 @@ kaito071831のポートフォリオサイトです。
 
 ```
 NEXT_PUBLIC_API_KEY
-NEXT_PUBLIC_HP_URL
 ```
