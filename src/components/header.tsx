@@ -40,6 +40,25 @@ const HeaderLi = styled.li`
 const HeaderNav = styled.nav`
   margin: 0 0 0 auto;
 `
+type HeaderItem = {
+  url: string;
+  title: string;
+}
+
+const HeaderItems: HeaderItem[] = [
+  {
+    url: "https://github.com/kaito071831",
+    title: "GitHub"
+  },
+  {
+    url: "https://qiita.com/kaito071831",
+    title: "Qiita"
+  },
+  {
+    url: "https://twitter.com/kaito071831",
+    title: "Twitter",
+  },
+]
 
 export const Header = () => {
   return(
@@ -50,9 +69,13 @@ export const Header = () => {
         </Link>
         <HeaderNav>
           <HeaderUl>
-            <Link href="https://twitter.com/kaito071831"><HeaderLi>Twitter</HeaderLi></Link>
-            <Link href="https://qiita.com/kaito071831"><HeaderLi>Qiita</HeaderLi></Link>
-            <Link href="https://github.com/kaito071831"><HeaderLi>GitHub</HeaderLi></Link>
+            {HeaderItems.map((item: HeaderItem) => (
+              <Link href="https://twitter.com/kaito071831">
+                <a target="_blank">
+                  <HeaderLi>Twitter</HeaderLi>
+                </a>
+              </Link>
+            ))}
             <Link href="/blog"><HeaderLi>BLOG</HeaderLi></Link>
           </HeaderUl>
         </HeaderNav>
