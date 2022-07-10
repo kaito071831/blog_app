@@ -28,7 +28,7 @@ export const HeadParts = (props: Page) => {
       <meta name="twitter:image" content={`${HP_URL}favicon.ico`} />
       <link rel="icon" href="/favicon.ico" />
       <link rel="canonical" href={HP_URL} />
-      <link rel="apple-touch-icon" href={"/favicon.png"} />
+      <link rel="apple-touch-icon" href={"/favicon.ico"} />
     </Head>
   )
 }
