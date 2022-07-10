@@ -19,10 +19,16 @@ export const HeadParts = (props: Page) => {
       <meta property="og:title" content={title}/>
       <meta property="og:description" content={DESCRIPTION}/>
       <meta property="og:site_name" content={HP_TITLE}/>
-      <meta property="og:image" content={`${HP_URL}favicon.ico`}/>
+      <meta property="og:image" content={"/favicon.ico"}/>
       <meta name="twitter:card" content="summary"/>
       <meta name="twitter:site" content="@kaito071831"/>
+      <meta name="twitter:description" content={DESCRIPTION} />
+      <meta name="twitter:url" content={HP_URL} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:image" content={"/favicon.png"} />
       <link rel="icon" href="/favicon.ico" />
+      <link rel="canonical" href={HP_URL} />
+      <link rel="apple-touch-icon" href={"/favicon.png"} />
     </Head>
   )
 }
