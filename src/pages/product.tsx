@@ -102,7 +102,7 @@ export const Products: Product[] = [
   },
   {
     title: "TaskControl",
-    url: "https://task-control-app.herokuapp.com/",
+    url: "https://github.com/kaito071831/task-control-app",
     src: TASK_CONTROL,
     height: 0,
     width: 0,
