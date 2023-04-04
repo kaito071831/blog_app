@@ -64,12 +64,12 @@ const careers: Career[] = [
     detail: "電話・インターネット回線の構築の疑似体験",
   },
   {
-    date: "2021/04-",
+    date: "2021/04-2023/03",
     content: "金沢工業大学 工学部 情報工学科",
     detail: "コンピューターやシステム開発について学習"
   },
   {
-    date: "2021/04-",
+    date: "2021/04-2023/03",
     content: "株式会社CirKit Webエンジニア インターン",
     detail: "システム開発部にてインターン。金沢工業大学の学食で利用されているサービスSAKITOの開発,HPの保守に従事。",
     tech: "Ruby / Ruby on Rails / Python / JavaScript(TypeScript) / React",
@@ -86,6 +86,12 @@ const careers: Career[] = [
     detail: "コッペパン購入システムの開発",
     tech: "JavaScript / GoogleAppsScript",
   },
+  {
+    date: "2023/04-",
+    content: "株式会社ゆめみ入社",
+    detail: "",
+    tech: undefined
+  }
 ]
 
 export const History = () => {
