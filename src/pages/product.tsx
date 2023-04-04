@@ -10,6 +10,7 @@ const KAITO_HP = require('../../public/image/my_site.png');
 const TASK_CONTROL = require('../../public/image/task-control-app.herokuapp.com_.png');
 const KTimer = require('../../public/image/KTimer.png');
 const WORK_APP = require('../../public/image/work_app.png');
+const InfoBoard = require('../../public/image/InfoBoard.png');
 
 const ProductIndex = styled.div`
   display: flex;
@@ -69,9 +70,9 @@ const ProductTech = styled.div`
   color: #1d90ed;
   background-color: #e4e4e4;
   padding: 0.1rem;
+  margin: 0 0.5rem;
   ${pc`
     display: inline-block;
-    margin-right: 0.5rem;
   `}
   ${sp`
     display: block;
@@ -126,6 +127,15 @@ export const Products: Product[] = [
     width: 270,
     detail: "商店・飲食店向け記録用メモアプリケーション",
     tech: ['Java'],
+  },
+  {
+    title: "リアルタイム掲示板",
+    url: "https://github.com/kaito071831/pd_app2",
+    src: InfoBoard,
+    height: 300,
+    width: 400,
+    detail: "リアルタイムに情報を送受信できる掲示板",
+    tech: ['Ruby', 'Ruby on Rails', 'TypeScript', 'Next.js', 'styled-components']
   },
 ]
 
