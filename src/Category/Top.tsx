@@ -20,7 +20,7 @@ export const Top = () => {
     <>
       <Contents bgColor="#000000">
         <TopContent><TopH1>Kaito071831</TopH1></TopContent>
-        <TopContent><TopP>Web Server Side Engineer</TopP></TopContent>
+        <TopContent><TopP>Web Developer</TopP></TopContent>
       </Contents>    
     </>
   )
