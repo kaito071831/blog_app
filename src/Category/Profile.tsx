@@ -16,7 +16,14 @@ const ProfileDt = styled.dt`
 const ProfileDd = styled.dd`
   float: left;
   margin: 0.25rem 0;
+  font-size: 0.5rem;
   font-family: 'Noto Sans JP', sans-serif;
+  ${pc`
+    font-size: 1rem;
+  `}
+  ${sp`
+    font-size: 0.5rem;
+  `}
 `
 
 const ProfileDiv = styled.div`
@@ -51,7 +58,7 @@ const profiles = [
   },
   {
     label: "Write",
-    content: "Java / Python / Ruby / JavaScript(TypeScript) / Go"
+    content: "Java / Python / Ruby / TypeScript / Go / Kotlin"
   },
   {
     label: "Hobby",
