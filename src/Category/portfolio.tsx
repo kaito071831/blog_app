@@ -5,7 +5,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper';
 import Image from "next/image";
 import Link from "next/link";
 import { Products } from "../pages/product";
-import { pc, sp } from "../styles/media";
+import { pc, sp, tab } from "../styles/media";
 
 import type { Product } from "../pages/product"
 
@@ -17,6 +17,9 @@ const ProductH2 = styled.h2`
 const ProductDiv = styled.div`
   ${pc`
     padding: 0 20rem;
+  `}
+  ${tab`
+    padding: 2rem;
   `}
   ${sp`
     padding: 2rem;

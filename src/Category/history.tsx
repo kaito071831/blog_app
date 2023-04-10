@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Contents } from "../components/content"
-import { pc } from "../styles/media"
+import { pc, sp, tab } from "../styles/media"
 
 const HistoryH2 = styled.h2`
   color: #000000;
@@ -30,6 +30,12 @@ const HistoryDiv = styled.div`
     width: 85%;
     float: left;
     border-left: 0.25rem #000000 solid;
+  `}
+  ${tab`
+    padding: 0 1rem;
+  `}
+  ${sp`
+    padding: 0 1rem;
   `}
   &:before {
     ${pc`
