@@ -15,6 +15,7 @@ const ProductH2 = styled.h2`
 `
 
 const ProductDiv = styled.div`
+  padding: 0 40rem;
   ${pc`
     padding: 0 20rem;
   `}
