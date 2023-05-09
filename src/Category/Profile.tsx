@@ -16,7 +16,7 @@ const ProfileDt = styled.dt`
 const ProfileDd = styled.dd`
   float: left;
   margin: 0.25rem 0;
-  font-size: 0.5rem;
+  font-size: 1rem;
   font-family: 'Noto Sans JP', sans-serif;
   ${pc`
     font-size: 1rem;
