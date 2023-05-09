@@ -26,7 +26,7 @@ export const pc = (
   first: CSSObject | TemplateStringsArray,
   ...interpolations: SimpleInterpolation[]
 ): FlattenSimpleInterpolation => css`
-  @media (min-width: 1025px) {
+  @media (min-width: 1025px) and (max-width: 1920px) {
       ${css(first, ...interpolations)}
   }
 `;
