@@ -56,7 +56,7 @@ const HeaderItems: HeaderItem[] = [
   },
   {
     url: "https://twitter.com/kaito071831",
-    title: "Twitter",
+    title: "X",
   },
 ]
 

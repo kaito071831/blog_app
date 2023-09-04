@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faNewspaper, faBlog } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -14,7 +14,7 @@ const FooterStyle = styled.footer`
 
 const FooterLink = styled.div`
   display: flex;
-  align-items: strech;
+  align-items: stretch;
   justify-content: center;
   margin-bottom: 1rem;
 `
@@ -39,9 +39,8 @@ const FooterItems: FooterItem[] = [
   },
   {
     url: "https://twitter.com/kaito071831",
-    icon: faTwitter,
+    icon: faXTwitter,
     title: "Twitter",
-    color: "#00acee",
   },
 ]
 
@@ -70,7 +69,7 @@ export const Footer = () => {
             />
           </Link>
         </FooterLink>
-        <div>&copy;kaito071831 2022</div>
+        <div>&copy;kaito071831 2023</div>
       </FooterStyle>
     </>
   )

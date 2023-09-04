@@ -155,7 +155,7 @@ const BlogId: NextPage<Props> = ({ blog, bloglist }: Props) => {
                   <TwitterTimelineEmbed
                     sourceType="profile"
                     screenName="kaito071831"
-                    options={{height: 400}}
+                    options={{height: 400, width: 400}}
                   />
                 </div>
               </nav>
