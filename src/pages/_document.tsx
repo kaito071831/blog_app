@@ -8,6 +8,7 @@ const Document = () => {
       </Head>
       <body>
         <p>aaa</p>
+        <span>nnnn</span>
         <Main />
         <NextScript />
       </body>
