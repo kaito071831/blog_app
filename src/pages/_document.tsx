@@ -7,6 +7,7 @@ const Document = () => {
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik+Moonrocks&display=swap" rel="stylesheet"/>
       </Head>
       <body>
+        <p>aaa</p>
         <Main />
         <NextScript />
       </body>
