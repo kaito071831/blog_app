@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Contents } from "../components/content"
 import {sp, pc} from "../styles/media"
 
-const ICON = require('/public/image/my_icon.png')
+const ICON = require('/public/image/my_icon.jpg')
 
 const ProfileDt = styled.dt`
   float: left;
@@ -79,8 +79,8 @@ export const Profile = () => {
           <Image
             src={ICON}
             alt="kaito071831 icon"
-            width={200}
-            height={200}
+            width={250}
+            height={300}
           />
           <div>
             <dl>

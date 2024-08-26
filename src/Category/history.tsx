@@ -95,8 +95,8 @@ const careers: Career[] = [
   {
     date: "2023/04-",
     content: "株式会社ゆめみ入社",
-    detail: "サーバーサイドエンジニア",
-    tech: undefined
+    detail: "サーバーサイドエンジニア / 象徴社長",
+    tech: "Kotlin / SpringBoot"
   }
 ]
 
