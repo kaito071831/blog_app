@@ -11,7 +11,7 @@ import Image from "next/image";
 import { pc, sp } from "../../styles/media";
 import { Pagination } from "../../components/Pagination";
 
-const DEFAULT_ICON = require('../../../public/image/my_icon.png')
+const DEFAULT_ICON = require('../../../public/image/my_icon.jpg')
 
 const ContentsBox = styled.div`
   min-height: 100vh;
